@@ -1,3 +1,12 @@
+/* in file set_malleable.c */
+int32 set_malleable(pid32);
+
+/* in clear_malleable */
+int32 clear_malleable(pid32);
+
+/* in file test_process.c */
+extern void test_process(int32);
+
 /* in file addargs.c */
 extern	status	addargs(pid32, int32, int32[], int32,char *, void *);
 

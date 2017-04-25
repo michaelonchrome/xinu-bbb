@@ -1,3 +1,12 @@
+/* in file xsh_signal_s */
+extern shellcmd xsh_signal_s(void);
+
+/* in file xsh_malleable.c */
+extern shellcmd xsh_malleable (int32, int32);
+
+/* in file xsh_create.c */
+extern shellcmd xsh_create  (int32, char*[]);
+
 /* in file xsh_argecho.c */
 extern	shellcmd  xsh_argecho	(int32, char *[]);
 

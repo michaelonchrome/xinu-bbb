@@ -26,6 +26,10 @@ pid32	create(
 	uint32		*a;		/* points to list of args	*/
 	uint32		*saddr;		/* stack address		*/
 
+	uint32 m_state = 0; /* By default should be 0 */
+						/* could be turned on thru a process */
+	uint32 c_usage;
+
 	mask = disable();
 	if (ssize < MINSTK)
 		ssize = MINSTK;
@@ -39,6 +43,10 @@ pid32	create(
 
 	prcount++;
 	prptr = &proctab[pid];
+
+	/* Stuff for lab3 */
+	prptr->cpu_usage = c_usage;
+	prptr->malleable_state = m_state; 
 
 	/* initialize process table entry for new process */
 	prptr->prstate = PR_SUSP;	/* initial state is suspended	*/

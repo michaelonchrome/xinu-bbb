@@ -8,7 +8,6 @@
  */
 void	clkhandler()
 {
-
 	
 	volatile struct am335x_timer1ms *csrptr =
 			(struct am335x_timer1ms *)0x44E31000;
