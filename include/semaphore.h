@@ -17,6 +17,7 @@ struct	sentry	{
 				/*     on the semaphore			*/
 };
 
+extern	sid32	g_sem;
 extern	struct	sentry semtab[];
 
 #define	isbadsem(s)	((int32)(s) < 0 || (s) >= NSEM)
